@@ -1,0 +1,15 @@
+<?php require_once __DIR__ . '/../basic/header.phtml'; ?>
+<?php
+    echo '<div class="row">';
+    for ($i = 0; $i < count($rooms); $i++) {
+        echo '<div class="col-md-6 col-xl-4">';
+            echo '<a class="card bg-info m-3 text-light hover p-2 btn btn-primary" href="room/join/' . $rooms[$i]['id']. '">';
+            echo '<h4>' . $rooms[$i]['name'] . '</h4>';
+            echo '<small>Założyciel: ' . $rooms[$i]['host_username'] . '</small><hr>';
+            echo $rooms[$i]['password'] != null ? '<h5>Potrzebne hasło!</h5>' : '<h5>&nbsp;</h5>';
+            echo '</a>';
+        echo '</div>';
+    }
+    echo '</div>';
+?>
+<?php require_once __DIR__ . '/../basic/footer.phtml'; ?>

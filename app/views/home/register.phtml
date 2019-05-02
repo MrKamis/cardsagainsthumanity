@@ -1,0 +1,23 @@
+<?php require_once __DIR__ . '/../basic/header.phtml'; ?>
+<form action="home/tryRegister" method="post" class="form container p-3 text-center">
+    <?php
+        echo isset($error) && $error ? '<div class="alert alert-warning">
+            <h5>Błąd rejestracji!</h5>
+            Prawdopodobnie nick jest zajęty lub nie wpisałeś danych!
+        </div>' : '';
+    ?>
+    <label>
+        Nick:
+        <input type="text" name="username" id="" class="form-control" autofocus>
+    </label>
+    <br>
+    <label>
+        Hasło
+        <input type="password" name="password" id="" class="form-control">
+    </label>
+    <br>
+    <input type="submit" value="Zarejetruj" class="btn btn-link">
+    <br>
+    <a href="/home" class="btn btn-link">lub zaloguj</a>
+</form>
+<?php require_once __DIR__ . '/../basic/footer.phtml'; ?>

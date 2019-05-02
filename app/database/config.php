@@ -28,7 +28,7 @@
          * @return bool
          */
         public static function createTables() {
-
+            
         }
     }
 ?>
